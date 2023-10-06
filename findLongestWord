@@ -1,0 +1,13 @@
+function findLongestWord(str) {
+  let strSplit = str.replace(/,/g, "").split(' ');
+  let lenghtOfLongestWord = 0;
+  let longestWord = '';
+  for(var i = 0; i < strSplit.length; i++){
+    if(strSplit[i].length > lenghtOfLongestWord){
+	lenghtOfLongestWord = strSplit[i].length;
+	longestWord = strSplit[i];
+    }
+  }
+  return longestWord;
+}
+findLongestWord("Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers");
